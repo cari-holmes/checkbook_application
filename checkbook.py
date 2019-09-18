@@ -10,18 +10,14 @@ def menu():
     print("""
     1) View current balance
     2) Make a withdrawl 
-    3) Make a deposit
-    4) View savings  
-    5) Exit\n""")
-
-
+    3) Make a deposit  
+    4) Exit\n""")
 
 # opens and reads the checkbook text file balance and converts it into a float
 def read_balance():
     f = open("checkbook.txt", "r")
     bal = float(f.read())
     return bal
-
 
 # opens and writes to the checkbook text file
 def write_balance(new_balance):
@@ -34,21 +30,11 @@ def make_deposit(deposit_amount):
     new_balance = int(current_amount) + int(deposit_amount)
     write_balance(new_balance)
 
-
 # this function takes the current_amount, (the read_balance()), and subtracts the withdraw_amount from it to to create a new balance, then calls the write_balance(new_balance) function to display the new amount
 def make_withdraw(withdraw_amount):
     current_amount = read_balance()
     new_balance = int(current_amount) - int(withdraw_amount)
     write_balance(new_balance)
-
-def read_savings():
-    f = open("savings.txt", "r")
-    balance = float(f.read())
-    return balance
-
-def write_savings(new_balance):
-    f = open("savings.txt", "w")
-    f.write(str(new_balance))
 
 # this function calls the menu() function to prompt the user on how they wish to proceed. 
 def main():
@@ -87,15 +73,8 @@ def main():
         input("Press 'ENTER' to continue.\n")
         main()
 
-# # If user picks opt 4, 
+# if user picks opt 4., prints exit string and exits the application
     elif option == "4":
-        print("Your current savings is ${:.2f}" .format(read_savings())) 
-        print("\n")
-        input("Press 'ENTER' to continue.")
-        main()
-
-# if user picks opt 5., prints exit string and exits the application
-    elif option == "5":
         print("Thank you, have a great day!\n")
 
 # if user picks option not listed, prints sorry statement the calls main() function to bring back to main menu and pick again.
@@ -104,9 +83,6 @@ def main():
         main()
 
 main()
-
-
-
 
 
 ### things to do:
@@ -195,6 +171,22 @@ main()
 #     3. Make a deposit (record a credit)
 #     4. View savings account 
 #     5. Exit
+
+    # def read_savings():
+    #     f = open("savings.txt", "r")
+    #     balance = float(f.read())
+    #     return balance
+
+    # def write_savings(new_balance):
+    #     f = open("savings.txt", "w")
+    #     f.write(str(new_balance))
+
+    # # If user picks opt 4, 
+    #     elif option == "4":
+    #         print("Your current savings is ${:.2f}" .format(read_savings())) 
+    #         print("\n")
+    #         input("Press 'ENTER' to continue.")
+    #         main()
 
 # Option 5. 
 # Thank you, have a great day!
