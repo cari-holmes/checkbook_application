@@ -53,11 +53,13 @@ def main():
     elif option == "2":
         withdraw_amount = input("How much do you wish to withdraw?\n")
         make_withdraw(withdraw_amount)
+
 # If the read_balance > 0, then it will call the make_withdraw(withdraw_amount) function and it will format the float to 2 decimal points and add a '$' to the amouunt.     
         if float(read_balance()) > 0: 
             print("Your new balance is ${:.2f}" .format(read_balance()))
             print("\n")
             input("Press 'ENTER' to continue.\n")
+            
 # If the read_balance < 0, then it will print 'insufficient' message and show new balance with float formatting.
         else: 
             print("Insufficient funds. Your account is negative. \n")
