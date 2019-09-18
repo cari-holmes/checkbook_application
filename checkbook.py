@@ -59,7 +59,7 @@ def main():
             print("Your new balance is ${:.2f}" .format(read_balance()))
             print("\n")
             input("Press 'ENTER' to continue.\n")
-            
+
 # If the read_balance < 0, then it will print 'insufficient' message and show new balance with float formatting.
         else: 
             print("Insufficient funds. Your account is negative. \n")
@@ -86,20 +86,7 @@ def main():
 
 main()
 
-
-### things to do:
-    # transfer from checking to savings
-    # negative balance
-
-# print("How would you like to proceed?")
-# print("""
-# 1) View current balance
-# 2) Make a withdrawl (record a debit)
-# 3) Make a deposit (record a credit)
-# 4) View savings account 
-# 5) Exit\n""")
-### transfer between accounts
-
+### Rough outline of project ###
 
 # ~~~~~~~ Python checkbook project: ~~~~~~~~
 
@@ -165,14 +152,14 @@ main()
 # # if no
 # return to main menu
 
-# Option 4.
-# You have $xxx in your saving account.
-# How would you like to proceed?
-#     1. View current balance
-#     2. Make a withdrawl (record a debit)
-#     3. Make a deposit (record a credit)
-#     4. View savings account 
-#     5. Exit
+    # Option 4.
+    # You have $xxx in your saving account.
+    # How would you like to proceed?
+    #     1. View current balance
+    #     2. Make a withdrawl (record a debit)
+    #     3. Make a deposit (record a credit)
+    #     4. View savings account 
+    #     5. Exit
 
     # def read_savings():
     #     f = open("savings.txt", "r")
